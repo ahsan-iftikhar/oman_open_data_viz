@@ -1,4 +1,5 @@
 # Loading data ------------------------------------------------------------
+source(file = "viz_code/setup_pkgs_preliminaries.R")
 source(file = "viz_code/etl_data-1.R")
 
 
@@ -32,7 +33,6 @@ tmap_by_gvrnt <- ggplot(data = vstr_only_rgn, aes(
   scale_fill_paletteer_d(`"calecopal::kelp1"`)
 
 tmap_by_gvrnt
-
 
 
 # Plot 1 | Ad Dakhliyah ---------------------------------------------------
@@ -97,7 +97,6 @@ vstr_only_dfr <- ggplot(data = filter(vstr_only,
 
 vstr_only_dfr
 
-
 # Plot 3 | Ash Sharqiyah South --------------------------------------------
 vstr_only_ash_shr <- ggplot(data = filter(vstr_only, regions %in% c("Ash Sharqiyah South")),
                             aes(x = year, y = value, 
@@ -143,4 +142,3 @@ ggsave(ptch_cmpos, filename = "ptch_cmpos.pdf",
 
 ggsave(ptch_cmpos, filename = "ptch_cmpos.png", 
        path = "viz_plots", width = 11, height = 7)
-
