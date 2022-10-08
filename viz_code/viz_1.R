@@ -127,9 +127,9 @@ vstr_only_ash_shr
 
 # Composition -------------------------------------------------------------
 ptch_cmpos <- (tmap_by_gvrnt | vstr_only_ad_dkh) / (vstr_only_dfr | vstr_only_ash_shr) +
-  patchwork::plot_annotation(title = ("Oman's visitors/tourist data summary Governorates"),
+  patchwork::plot_annotation(title = ("Oman's visitors/tourist data summary by Governorates"),
                              subtitle = "Jabel e Akhdar (Dakhliyah) & Khor Al Baleed (Dhofar) were the most consistently visited place",
-                             caption = "Note: Data Sourced from Oman Open Data",
+                             caption = "Note: Data Sourced from Open Data Oman (https://opendata.om/)",
                              theme = theme(
                                plot.title = element_text(face = "bold", size = 16)
                              )
@@ -140,4 +140,7 @@ ggsave(ptch_cmpos, filename = "ptch_cmpos.pdf",
        path = "viz_plots", width = 11, height = 7, device = cairo_pdf)
 
 
+
+ggsave(ptch_cmpos, filename = "ptch_cmpos.png", 
+       path = "viz_plots", width = 11, height = 7)
 
