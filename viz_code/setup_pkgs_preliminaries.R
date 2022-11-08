@@ -13,7 +13,7 @@ library(paletteer)
 # Setting up custom fonts
 
 cus_fnt <- match_font("Roboto Condensed")$path
-cus_fnt <- system_fonts()$family[system_fonts()$path == sans]
+cus_fnt <- system_fonts()$family[system_fonts()$path == cus_fnt]
 
 
 register_variant(
