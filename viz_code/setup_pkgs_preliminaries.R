@@ -9,9 +9,7 @@ library(systemfonts)
 library(treemapify)
 library(paletteer)
 
-
 # Setting up custom fonts
-
 cus_fnt <- match_font("Roboto Condensed")$path
 cus_fnt <- system_fonts()$family[system_fonts()$path == cus_fnt]
 
